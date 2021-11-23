@@ -28,7 +28,7 @@ extern "x86-interrupt" fn test_double_fault_handler(
     exit_qemu(QemuExitCode::Success);
 
     #[allow(clippy::empty_loop)]
-    loop {}
+    blog_os::hlt_loop();
 }
 
 #[panic_handler]
